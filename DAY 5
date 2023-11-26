@@ -1,0 +1,40 @@
+ex1
+Select DISTINCT CITY from STATION
+where ID%2=0
+ex 2
+SELECT COUNT (CITY) - COUNT (DISTINCT CITY) FROM STATION
+ex 4
+ROUND(CAST(SUM(item_count*order_occurrences)/SUM(order_occurrences)) DECIMAL), 1) 
+AS MEAN
+FROM items_per_order;
+EX 5
+SELECT candidate_id FROM candidates;
+where skill in ('Python', 'Tableau', 'PostgreSQL')
+groub by candidate_id
+having count (skill) = 3 
+ORDER BY candidate_id
+EX 6
+SELECT user_id,
+DATE (MAX(post_date)) - DATE (MIN(post_date)) as days_between
+from posts
+where post_date >= '2021-01-01' and '2022-01-01'
+Having count (post_id) >=2
+EX 7
+SELECT card_name,
+MAX(issued_amount) - MIN(issued_amount) AS difference
+FROM monthly_cards_issued;
+GROUP BY card_name
+ORDER BY difference DES
+EX 8
+SELECT manufacturer, drug_count, total_loss
+COUNT(DRUG) AS drug_count
+ABS (SUM (cogs - total_sales)) AS total_loss
+where total_sales < cogs 
+ FROM pharmacy_sales;
+ORDER BY DESC
+ex 9
+Select id , movie,  description ,  rating  
+where id%2=1 and description <> 'boring'
+ordered by rating in desc
+ex 10
+ex 11
